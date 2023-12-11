@@ -41,7 +41,7 @@ function AddBeerPage() {
   };
 
   return (
-    <div>
+    <div className='AddBeerPage'>
       <form onSubmit={handleSubmit}>
         <label htmlFor='name'>Name:</label>
         <input

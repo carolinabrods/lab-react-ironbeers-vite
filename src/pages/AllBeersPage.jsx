@@ -31,12 +31,16 @@ function AllBeersPage() {
       <SearchBar setBeers={setBeers} />
       {beers.map(beer => {
         return (
-          <div key={beer._id} className='BeerCard'>
-            <Link to={`/beers/${beer._id}`}>
-              <img src={beer.image_url} alt='beer' />
-              <h2>{beer.name}</h2>
-              <h3>{beer.tagline}</h3>
-              <p>Created by: {beer.contributed_by}</p>
+          <div key={beer._id}>
+            <Link to={`/beers/${beer._id}`} className='link'>
+              <div className='BeerCard'>
+                <img src={beer.image_url} alt='beer' />
+                <div className='BeerInfo'>
+                  <h2>{beer.name}</h2>
+                  <h3>{beer.tagline}</h3>
+                  <p>Created by: {beer.contributed_by}</p>
+                </div>
+              </div>
             </Link>
           </div>
         );

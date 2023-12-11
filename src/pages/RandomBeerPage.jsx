@@ -29,12 +29,14 @@ function RandomBeersPage() {
       {beer && (
         <>
           <img src={beer.image_url} alt='beer image' />
-          <h2>{beer.name}</h2>
-          <h3>{beer.tagline}</h3>
-          <p>{beer.description}</p>
-          <p>First Brewed: {beer.first_brewed}</p>
-          <p>Attenuation Level: {beer.attenuation_level}</p>
-          <p>Contributor: {beer.contributed_by}</p>
+          <div className='BeerInfo'>
+            <h2>{beer.name}</h2>
+            <h3>{beer.tagline}</h3>
+            <p>{beer.description}</p>
+            <p>First Brewed: {beer.first_brewed}</p>
+            <p>Attenuation Level: {beer.attenuation_level}</p>
+            <p>Contributor: {beer.contributed_by}</p>
+          </div>
         </>
       )}
     </div>
